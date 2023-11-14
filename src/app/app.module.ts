@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/navBar/navBar.component';
 import { CreateQuestionComponent } from './components/createQuestion/createQuestion.component'; 
 import { MainComponent } from './components/main/main.component';
-import { ViewTests } from './components/viewTests/viewTests.component';
+import { Tests } from './components/Tests/Tests.component';
+import { QuestionService } from './services/question.service';
+import { HttpClientModule } from '@angular/common/http';
+import { Question } from './components/question/question.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -16,13 +21,17 @@ import { ViewTests } from './components/viewTests/viewTests.component';
     NavBarComponent,
     CreateQuestionComponent,
     MainComponent,
-    ViewTests
+    Tests,
+    Question
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    CommonModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [QuestionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

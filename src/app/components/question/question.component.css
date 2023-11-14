@@ -1,0 +1,30 @@
+.question-wrapper {
+    margin-left:15%;
+}
+
+ol {
+    list-style-type: none;
+}
+
+ label {
+    /* padding: 20px; */
+     background-color:#F9FAFB;
+    font-size: 20px; 
+}
+
+.submit {
+    width: 70px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #2C5282;
+    color: #FFFFFF;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submit:hover {
+    background-color: #1F3A4E; /* Затемненный оттенок */
+    color: #DDDDDD;
+}
+.finish {
+    margin-left: 15%;
+}
